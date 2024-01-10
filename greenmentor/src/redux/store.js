@@ -5,4 +5,3 @@ import reducer from './reducer';
 const store = legacy_createStore(reducer , applyMiddleware(thunk));
 
 export default store;
-//

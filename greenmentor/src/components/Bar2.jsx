@@ -4,36 +4,41 @@ import { useDispatch, useSelector } from 'react-redux';
 import { gettingDataSuccess } from '../redux/actions';
 
 export const options = {
-  responsive: true,
-  interaction: {
-    mode: 'index',
-    intersect: false,
-  },
-  stacked: false,
-  plugins: {
-    title: {
-      display: true,
-      text: 'Chart.js Doughnut Chart - 2023 Emissions',
+    responsive: true,
+    interaction: {
+      mode: 'index',
+    //   intersect: false,
     },
-  },
-};
+    stacked: false,
+    plugins: {
+      legend: {
+        display: true,
+        position: 'bottom', 
+        labels: {
+          usePointStyle: true, 
+          
+        },
+      },
+    },
+  };
 
 export const DoughnutChart = () => {
   const allData = useSelector((store) => store.data);
-  const dispatch = useDispatch();
-  console.log(allData);
+//   const dispatch = useDispatch();
+//   console.log(allData);
 
   const [uniqueSuppliers, setUniqueSuppliers] = useState([]);
 
-  useEffect(() => {
-    dispatch(gettingDataSuccess());
-  }, [dispatch]);
+//   useEffect(() => {
+//     dispatch(gettingDataSuccess());
+//   }, [dispatch]);
 
   useEffect(() => {
     const uniqueSuppliersList = Array.from(new Set(allData.map((data) => data.supplier)));
     setUniqueSuppliers(uniqueSuppliersList);
   }, [allData]);
 
+  
   const getTotalEmissionsBySupplier = (supplier) => {
     return allData
       .filter((data) => data.supplier === supplier)
@@ -44,7 +49,7 @@ export const DoughnutChart = () => {
     labels: uniqueSuppliers,
     datasets: [{
       type: 'doughnut',
-      label: "Total Emissions - 2023",
+      
       backgroundColor: ["#544B8D", "#FF5733", "#5CAB7D", "#FFC300", '#FFC400',
       '#3BB85E',
       '#B54F69',
@@ -57,8 +62,8 @@ export const DoughnutChart = () => {
   };
 
   return (
-    <div style={{width : '40%'}}>
-      <Doughnut data={chartData} options={options} />
+    <div style={{width : '70%'}}>
+      <Doughnut  options={options} data={chartData}/>
     </div>
   );
 };

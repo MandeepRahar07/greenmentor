@@ -61,11 +61,6 @@ export const options = {
 
 export const Barchart = () => {
     const data =    useSelector((store)=>store.data)
-    const dispatch = useDispatch();
-
-    useEffect(()=>{
-  dispatch(gettingDataSuccess())
-    },[dispatch])
     console.log(data);
     const [useData, setuseData] = useState({
       labels : data.filter((data)=>  data.year == "2023").map((data)=>data.month),
@@ -105,7 +100,7 @@ export const Barchart = () => {
     ]
     })
 
-    
+   
   return <Bar data={useData} options={options} />
 
   

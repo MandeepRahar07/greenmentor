@@ -8,13 +8,13 @@ export const getSuccess = (payload)=>{
     }
 }
 
-export const gettingDataSuccess =()=>(dispatch)=>{
+export const gettingDataSuccess = () => async (dispatch) => {
     try {
-        axios.get(`http://localhost:3000/data`).then((res)=>{
-            dispatch(getSuccess(res.data));
-            console.log(res.data);
-        })
+        const res = await axios.get(`http://localhost:3000/data`);
+        dispatch(getSuccess(res.data));
+        console.log(res.data);
     } catch (error) {
         console.log(error);
     }
-}
+};
+gettingDataSuccess();

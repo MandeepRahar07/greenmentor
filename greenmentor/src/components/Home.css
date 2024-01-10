@@ -74,10 +74,26 @@
     width: 220px;
 }
 
-.dropdown-item {
-    color: white;
+.dropdown-item{
+color: #f1ecec;
 }
 
+.dropdown-menu {
+    display: none;
+    
+  }
+  .show {
+    display: block ;
+    /* background-color: #5C5C5C; */
+    width: 85%;
+  }
+  
+.show li a{
+  text-decoration: none;
+
+}
+  /* Additional styling for when the dropdown is not shown */
+ 
 .no-arrow::after {
     display: none;
 }
@@ -300,10 +316,7 @@ border: 1px solid #EBEBEB;
 background: #FFF
 }
 
-#homeBottomDivleftdivfirst>div:nth-of-type(1) {
-    padding: 20px;
-    /* border: 1px solid */
-}
+
 
 #TopSupplierDiv {
     display: flex;
@@ -353,17 +366,22 @@ background: #FFF
 
 #headerPiechart {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 20px;
 
 
 }
 
-#PieChartDiv {
-    width: 60%;
-    margin: auto;
+
+#homeBottomDivleftdivsecond {
+    width: 459px;
+    height: 471px;
+    flex-shrink: 0;
 }
 
+#PieChartDiv {
+margin-left: 50px;
+}
 #svgDiv {
     border: 1px solid #dbd8d8;
     border-radius: 10px;
@@ -371,21 +389,22 @@ background: #FFF
     padding: 5px;
     align-items: center;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
-#homeBottomDivRightDiv {
-    border: 1px solid #dbd8d8;
-    width: 60%;
-    border-radius: 12px;
-
+#homeBottomDivRightDiv{
+    width: 500px;
+    /* border: 1px solid rgb(103, 100, 100); */
 }
 
 
 #tableHeader {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    width: 450px;
+height: 48px;
+flex-shrink: 0;
+padding-left: 50px;
 }
 
 #tableHeader>button {
@@ -404,19 +423,21 @@ background: #FFF
     background: #FFF;
     
 }
+@media screen and (max-width: 1000px) {
+    #homeBottomDiv {
+        flex-direction: column;
+    }
 
-th {
-    text-transform: uppercase;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: center;
-    background-color: #0000007A;
+    #homeBottomDivleftdivfirst,
+    #homeBottomDivleftdivsecond,
+    #PieChartDiv,
+    #homeBottomDivRightDiv,
+    #tableHeader {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+    }
 }
 
-td{
-    text-align: center;
-}
 
 
