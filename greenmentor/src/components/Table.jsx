@@ -15,8 +15,7 @@ export function Tablechart() {
           : { content: <span>&#129107;</span>, color: 'green'}};
   return (
     <div id='tablebox'>
-        <table>
-
+    <table>
        <thead>
                     <tr>
                       <th>MONTH</th>
@@ -26,7 +25,6 @@ export function Tablechart() {
                     </tr>
 
        </thead>
-
               <tbody>
                     {
                       data.filter((data) => data.year == '2023').map((data) => {

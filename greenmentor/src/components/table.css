@@ -40,7 +40,6 @@ td.red {
   color: red;
 }
 
-/* Vertical lines */
 td:not(:last-child) {
   border-right: 1px solid #ddd;
 }

@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Doughnut } from 'react-chartjs-2';
-import { useDispatch, useSelector } from 'react-redux';
-import { gettingDataSuccess } from '../redux/actions';
+import { useSelector } from 'react-redux';
+
 
 export const options = {
     responsive: true,
     interaction: {
       mode: 'index',
-    //   intersect: false,
     },
     stacked: false,
     plugins: {
@@ -24,14 +23,7 @@ export const options = {
 
 export const DoughnutChart = () => {
   const allData = useSelector((store) => store.data);
-//   const dispatch = useDispatch();
-//   console.log(allData);
-
   const [uniqueSuppliers, setUniqueSuppliers] = useState([]);
-
-//   useEffect(() => {
-//     dispatch(gettingDataSuccess());
-//   }, [dispatch]);
 
   useEffect(() => {
     const uniqueSuppliersList = Array.from(new Set(allData.map((data) => data.supplier)));
@@ -55,7 +47,7 @@ export const DoughnutChart = () => {
       '#B54F69',
       '#E994B1',
       '#7C95EA',
-      '#544B8D',], // You can add more colors as needed
+      '#544B8D',], 
       borderWidth: 1,
       data: uniqueSuppliers.map((supplier) => getTotalEmissionsBySupplier(supplier)),
     }],

@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { Barchart } from './components/Barchart';
 import { DoughnutChart } from './components/Bar2';
@@ -23,11 +23,8 @@ function App() {
           <Home/> 
         ) : (
           <p>Loading data...</p>
-          /* You can replace the loading message with any other UI element */
         )}
-        {/* <DoughnutChart/> */}
-        {/* <Tablechart/> */}
-        {/* <Home/> */}
+     
       </div>
     </div>
   );

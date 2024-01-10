@@ -14,8 +14,7 @@ import {
   LineController,
   BarController,
 } from 'chart.js';
-import { Chart } from 'react-chartjs-2';
-import { gettingDataSuccess } from '../redux/actions';
+
 
 ChartJS.register(
   LinearScale,
