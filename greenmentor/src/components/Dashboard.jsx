@@ -29,17 +29,17 @@ export const Home = () => {
   return (
     <div>
       <div id='homeTop' >
-        <div id='homeLeft'>
-          <div className='homeIcon' >
-            <div className='homeInnerDivIcon' >
+        <div id='dashboardLeft'>
+          <div className='dashboardIcon' >
+            <div className='dashboardInnerDivIcon' >
               <img src={icon} alt="" />
             </div>
           </div>
-          <div className='homeDropdownOptions'>
+          <div className='dashboardDropdownOptions'>
             <div>DATA-IN</div>
             <div >
               <div
-                className=" homeDropdownToggle no-arrow" 
+                className=" dashboardDropdownToggle no-arrow" 
                 type="button"
                 onClick={toggleEnergy}
               >
@@ -80,7 +80,7 @@ export const Home = () => {
             </div>
             <div >
               <div
-                className=" homeDropdownToggle no-arrow" 
+                className=" dashboardDropdownToggle no-arrow" 
                 type="button"
                 onClick={toggleWater}
               >
@@ -113,14 +113,14 @@ export const Home = () => {
 
             </div>
           </div>
-          <div className='homeDropdownOptions'>
+          <div className='dashboardDropdownOptions'>
             <div>ANALYZE</div>
             <div >
 
 {/* .............................. */}
 
               <div
-                className=" homeDropdownToggle"
+                className=" dashboardDropdownToggle"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
                   <g clip-path="url(#clip0_1_39)">
@@ -139,7 +139,7 @@ export const Home = () => {
             </div>
             <div >
               <div
-                className=" homeDropdownToggle" >
+                className=" dashboardDropdownToggle" >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M4.66634 2.66634V1.33301H11.333V2.66634H14.6663V3.99967H13.333V13.9997C13.333 14.1765 13.2628 14.3461 13.1377 14.4711C13.0127 14.5961 12.8432 14.6663 12.6663 14.6663H3.33301C3.1562 14.6663 2.98663 14.5961 2.8616 14.4711C2.73658 14.3461 2.66634 14.1765 2.66634 13.9997V3.99967H1.33301V2.66634H4.66634ZM3.99967 3.99967V13.333H11.9997V3.99967H3.99967ZM5.99967 5.99967H7.33301V11.333H5.99967V5.99967ZM8.66634 5.99967H9.99967V11.333H8.66634V5.99967Z" fill="white" />
                 </svg>
@@ -149,8 +149,8 @@ export const Home = () => {
 
             </div>
           </div>
-          <div className='homeleftbuttonDiv' >
-            <button id='HomeButton' >Open Help Center</button>
+          <div className='dashboardleftbuttonDiv' >
+            <button id='dashboardButton' >Open Help Center</button>
           </div>
           <div className='homeLastDiv' >
             <p>POWERED BY</p>
@@ -278,12 +278,12 @@ export const Home = () => {
             <p>Emission/Revenue</p>
             <Barchart/>
           </div>
-          <div id='homeBottomDiv' >
+          <div id='BottomDiv' >
 
 
 
-            <div id='homeBottomDivleftdivfirst'>
-              <div id='homeBottomDivleftdivsecond' >
+            <div id='BottomDivleftfirst'>
+              <div id='BottomDivleftsecond' >
                 <div id='headerPiechart' >
                   <div>Emission by Supplier</div>
                   <div id='svgDiv' >
