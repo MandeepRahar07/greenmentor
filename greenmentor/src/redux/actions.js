@@ -10,7 +10,7 @@ export const getSuccess = (payload)=>{
 
 export const gettingDataSuccess = () => async (dispatch) => {
     try {
-        const res = await axios.get(`http://localhost:3000/data`);
+        const res = await axios.get(`https://render-json-zr3u.onrender.com/data`);
         dispatch(getSuccess(res.data));
         console.log(res.data);
     } catch (error) {
