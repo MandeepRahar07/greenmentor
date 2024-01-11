@@ -1,0 +1,59 @@
+#BottomDivleftfirst {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    /* border : 1px solid; */
+    text-align: center;
+    border-radius: 12px;
+border: 1px solid #EBEBEB;
+background: #FFF;
+margin: auto;
+  }
+  
+  #BottomDivleftsecond {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    padding: 2%;
+    width: 100%;
+    background: #FFF;
+
+    /* Center the content horizontally */
+  }
+  
+  #headerPiechart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%;
+  }
+  
+  #headerPiechart div {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  #svgDiv {
+    display: flex;
+    align-items: center;
+
+  }
+  
+  #svgDiv svg {
+    margin-right: 2%;
+  }
+  
+  #PieChartDiv {
+    padding-top: 10%;
+    width: 100%;
+    margin: 0 auto; /* Center the content horizontally */
+  }
+  #svgDiv{
+    padding: 0.5%;
+    border-radius: 12px;
+    border: 1px solid #EBEBEB;
+    background: #FFF;
+    box-shadow: 0px 0.5px 4px 0px rgba(0, 0, 0, 0.02), 0px 2px 16px 0px rgba(0, 0, 0, 0.02), 0px 8px 80px 0px rgba(0, 0, 0, 0.04);
+  }

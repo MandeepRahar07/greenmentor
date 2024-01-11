@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { gettingDataSuccess } from '../redux/actions';
+import { gettingDataSuccess } from '../../redux/actions';
 import './table.css'
 
 

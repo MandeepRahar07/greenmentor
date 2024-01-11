@@ -21,7 +21,7 @@
 }
 
 #homeMainRightDiv {
-    margin-left: 18%;
+    /* margin-left: 18%; */
     right: 0;
     top: 0;
     width: 82%;
@@ -135,24 +135,42 @@
 
 .homeLastElement {
     width: 14%;
-    border: 1px solid;
-    text-align: center;
-    padding: 15px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    color: rgba(255, 255, 255, 0.84);
-    background-color: #02AB6C;
-    border-radius: 10px;
+    border-radius: 12px;
+    align-items: center;
+gap: 10px;
+border: 1px solid #EBEBEB;
+padding-top: 1%;
+
+background: rgba(2, 171, 108, 0.67);
+
+box-shadow: 0px 0.599px 5.32px 0px rgba(0, 0, 0, 0.01), 0px 2.01px 17.869px 0px rgba(0, 0, 0, 0.01), 0px 9px 80px 0px rgba(0, 0, 0, 0.02);
+
+
+
 }
 
 .homeLastElement>div:nth-of-type(1) {
+    color: #FFF;
+
+    font-family: HelveticaNeue;
     font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
 
 }
 
 .homeLastElement>div:nth-of-type(2) {
-    font-size: 46px;
+    color: rgba(255, 255, 255, 0.84);
+
+text-align: center;
+font-family: HelveticaNeue;
+font-size: 46px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 
 }
 
@@ -160,11 +178,18 @@
 .smallFontinDiv {
     font-size: 11px;
 }
+/* homeMainRightDivThirdDiv */
 
-.BarChartDiv {
-    padding: 10px;
-    margin: 20px;
-    width: 1000px;
-    border: 1px solid #EBEBEB;
-    border-radius: 12px;
+@media screen and (max-width: 800px) {
+    #homeMainRightDivThirdDiv {
+        display: grid;
+        grid-template-columns: 2fr 2fr; /* Fix the typo here */
+        gap: 10px;
+    }
+    .homeLastElement {
+        width: 50%;
 }
+}
+
+
+

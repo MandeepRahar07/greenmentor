@@ -54,7 +54,7 @@ export const DoughnutChart = () => {
   };
 
   return (
-    <div style={{width : '70%'}}>
+    <div>
       <Doughnut  options={options} data={chartData}/>
     </div>
   );

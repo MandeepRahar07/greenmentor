@@ -17,4 +17,4 @@ export const gettingDataSuccess = () => async (dispatch) => {
         console.log(error);
     }
 };
-gettingDataSuccess();
+// gettingDataSuccess();
